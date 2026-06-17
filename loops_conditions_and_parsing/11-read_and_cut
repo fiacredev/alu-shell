@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# This script returns only the username, User Id and homedirectory for the users
+
+while read -r line
+do
+    echo "$line" | cut -d ':' -f 1,3,6
+done < /etc/passwd

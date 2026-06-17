@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Now i get it why they consider awk to be like another programming language in shell, because in this script it is counting all instances of returning IPs on particular response status codes
+
+awk '{print $1, $9}' apache-access.log | sort | uniq -c | sort -rn
